@@ -1,12 +1,17 @@
 # Databricks notebook source
 # MAGIC %md 
-# MAGIC #Ingest circuit_file
+# MAGIC #Ingest Races_file
 # MAGIC
 
 # COMMAND ----------
 
 dbutils.widgets.text("p_data_source", " ")
 v_data_source= dbutils.widgets.get("p_data_source")
+
+# COMMAND ----------
+
+dbutils.widgets.text("p_file_date", "2021-03-21")
+v_file_date= dbutils.widgets.get("p_file_date")
 
 # COMMAND ----------
 
@@ -45,7 +50,7 @@ df_schema= StructType(fields=[StructField("raceId", IntegerType(),False),
 # COMMAND ----------
 
 #Readiing data using Clustered Autontication 
-df= spark.read.csv(f"{raw_folder_path}", header= True, schema= df_schema)
+df= spark.read.csv(f"{raw_folder_path}/{v_file_date}/races.csv", header= True, schema= df_schema)
 
 # COMMAND ----------
 
@@ -81,7 +86,8 @@ display(Selected_df)
 df_renamed= Selected_df.withColumnRenamed("circuitId", "circuit_id")\
 .withColumnRenamed("raceId", "race_id")\
 .withColumnRenamed("year", "race_year")\
-.withColumn("data_source", lit(v_data_source))
+.withColumn("data_source", lit(v_data_source))\
+.withColumn("file_ate", lit(v_file_date))
 
 
 display(df_renamed)
@@ -106,19 +112,8 @@ display(final_df)
 
 # COMMAND ----------
 
-# MAGIC %md
-# MAGIC #Step 5-> Data Frame Writer to Parquet file formate
-# MAGIC
-
-# COMMAND ----------
-
-final_df.write.mode("overwrite").parquet(f"{processed_folder_path}/races")
-
-
-# COMMAND ----------
-
 # MAGIC %md 
-# MAGIC #Step 6-> Partittion of Data
+# MAGIC #Step 5-> Partittion of Data
 # MAGIC -> Partation of race data based on race_year column
 # MAGIC
 
@@ -128,7 +123,7 @@ final_df.write.mode("overwrite").partitionBy('race_year').format("parquet").save
 
 # COMMAND ----------
 
-
+display(spark.read.parquet(f"{processed_folder_path}/races"))
 
 # COMMAND ----------
 
