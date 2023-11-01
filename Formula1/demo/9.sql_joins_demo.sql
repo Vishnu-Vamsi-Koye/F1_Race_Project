@@ -108,7 +108,3 @@ SELECT *
 SELECT *
   FROM v_driver_standings_2018 d_2018
   CROSS JOIN v_driver_standings_2020 d_2020
-
--- COMMAND ----------
-
-
