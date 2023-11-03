@@ -19,9 +19,9 @@
 			"type": "string",
 			"defaultValue": "1016-213701-i8qh5x61"
 		},
-		"tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date": {
+		"tr_processed_formula1_data_properties_pipeline_parameters_p_window_end_date": {
 			"type": "string",
-			"defaultValue": "2021-04-18"
+			"defaultValue": "2021-03-28"
 		},
 		"containerUri": {
 			"type": "string",
@@ -59,8 +59,8 @@
 					"ls_databricks_course_ws_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('ls_databricks_course_ws_properties_typeProperties_existingClusterId')]"
 					},
-					"tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date": {
-						"value": "[parameters('tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date')]"
+					"tr_processed_formula1_data_properties_pipeline_parameters_p_window_end_date": {
+						"value": "[parameters('tr_processed_formula1_data_properties_pipeline_parameters_p_window_end_date')]"
 					}
 				}
 			},
