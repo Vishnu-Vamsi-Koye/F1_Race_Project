@@ -9,7 +9,7 @@
 				"type": "PipelineReference"
 			},
 			"parameters": {
-				"p_window_end_date": "2021-03-18"
+				"p_window_end_date": "2021-04-18"
 			}
 		},
 		"type": "TumblingWindowTrigger",

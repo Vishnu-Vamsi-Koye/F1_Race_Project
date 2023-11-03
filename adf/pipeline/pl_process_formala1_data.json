@@ -15,7 +15,7 @@
 					"waitOnCompletion": true,
 					"parameters": {
 						"p_window_end_date": {
-							"value": "@pipeline().parameters.p_window_end_date",
+							"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
 							"type": "Expression"
 						}
 					}
@@ -41,7 +41,7 @@
 					"waitOnCompletion": true,
 					"parameters": {
 						"p_window_end_date": {
-							"value": "@pipeline().parameters.p_window_end_date",
+							"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
 							"type": "Expression"
 						}
 					}
