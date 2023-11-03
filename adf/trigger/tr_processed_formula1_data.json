@@ -9,7 +9,7 @@
 				"type": "PipelineReference"
 			},
 			"parameters": {
-				"p_window_end_date": "2021-03-28"
+				"p_window_end_date": "2021-03-21"
 			}
 		},
 		"type": "TumblingWindowTrigger",
@@ -17,6 +17,7 @@
 			"frequency": "Hour",
 			"interval": 168,
 			"startTime": "2021-03-14T22:00:00Z",
+			"endTime": "2021-04-25T17:55:29Z",
 			"delay": "00:00:00",
 			"maxConcurrency": 1,
 			"retryPolicy": {
