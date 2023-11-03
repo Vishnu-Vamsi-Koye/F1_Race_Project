@@ -21,7 +21,7 @@
 		},
 		"tr_processed_formula1_data_properties_pipeline_parameters_p_window_end_date": {
 			"type": "string",
-			"defaultValue": "2021-03-28"
+			"defaultValue": "2021-03-21"
 		}
 	},
 	"variables": {
@@ -734,6 +734,7 @@
 					"frequency": "Hour",
 					"interval": 168,
 					"startTime": "2021-03-14T22:00:00Z",
+					"endTime": "2021-04-25T17:55:29Z",
 					"delay": "00:00:00",
 					"maxConcurrency": 1,
 					"retryPolicy": {

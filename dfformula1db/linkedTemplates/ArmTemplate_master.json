@@ -21,7 +21,7 @@
 		},
 		"tr_processed_formula1_data_properties_pipeline_parameters_p_window_end_date": {
 			"type": "string",
-			"defaultValue": "2021-03-28"
+			"defaultValue": "2021-03-21"
 		},
 		"containerUri": {
 			"type": "string",
