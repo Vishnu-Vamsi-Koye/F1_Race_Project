@@ -21,7 +21,7 @@
 		},
 		"tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date": {
 			"type": "string",
-			"defaultValue": "2021-03-18"
+			"defaultValue": "2021-04-18"
 		}
 	},
 	"variables": {
@@ -375,7 +375,7 @@
 							"waitOnCompletion": true,
 							"parameters": {
 								"p_window_end_date": {
-									"value": "@pipeline().parameters.p_window_end_date",
+									"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
 									"type": "Expression"
 								}
 							}
@@ -401,7 +401,7 @@
 							"waitOnCompletion": true,
 							"parameters": {
 								"p_window_end_date": {
-									"value": "@pipeline().parameters.p_window_end_date",
+									"value": "@formatDateTime(pipeline().parameters.p_window_end_date,'yyyy-MM-dd')",
 									"type": "Expression"
 								}
 							}
