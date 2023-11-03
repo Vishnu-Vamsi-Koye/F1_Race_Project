@@ -21,7 +21,7 @@
 		},
 		"tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date": {
 			"type": "string",
-			"defaultValue": "trigger().outputs.windowEndTime"
+			"defaultValue": "2021-03-18"
 		},
 		"containerUri": {
 			"type": "string",
