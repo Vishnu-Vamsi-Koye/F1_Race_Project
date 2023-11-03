@@ -2,7 +2,16 @@
 	"name": "tr_processed_formula1_data",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "pl_process_formala1_data",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"p_window_end_date": "2021-03-28"
+			}
+		},
 		"type": "TumblingWindowTrigger",
 		"typeProperties": {
 			"frequency": "Hour",
