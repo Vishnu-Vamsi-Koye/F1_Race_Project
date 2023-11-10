@@ -13,26 +13,26 @@ Tools and Technologies Used
 •	Azure Databricks
 # Project Execution
 Data Extraction and Conversion
-1.	Data Extraction:
+1.	Data Extraction:\n
 •	Raw CSV files were sourced from Ergast websites, providing a foundational dataset for further processing.
-2.	File Format Conversion:
+2.	File Format Conversion: \n
 •	The raw data underwent a transformation process, resulting in the conversion of data into JSON files for initial analysis.
 Data Transformation and Storage
-3.	Data Transformation:
+3.	Data Transformation:\n
 •	Comprehensive transformations were applied to the data to meet specific project requirements and enhance its analytical value.
-4.	Storage in Parquet Files:
+4.	Storage in Parquet Files:\n
 •	Processed data was stored in Parquet files, ensuring efficient storage and retrieval.
-5.	Azure Data Lake Integration:
+5.	Azure Data Lake Integration:\n
 •	A designated transformation container in Azure Data Lake was utilized for storing the Parquet files, ensuring secure and scalable storage.
 Enhancing Accessibility and SQL Integration
-6.	Restricting Access:
+6.	Restricting Access:\n
 •	Access to the data was restricted exclusively to downstream teams, facilitated through the use of Parquet files.
-7.	Table Format Modification:
+7.	Table Format Modification:\n
 •	Modifications were made to the transformations table to enable data retrieval in table format, enhancing accessibility for downstream teams using SQL queries.
 # Folder Structure Overview
-Setup
+Setup \n
 •	Notebooks for setting up environments and access necessary for project development.
-Includes
+Includes \n
 •	Notebooks storing essential functions created during the project.
 •	Configuration notebook defining project settings.
 Utils
